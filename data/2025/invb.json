@@ -1,0 +1,168 @@
+[
+  {
+    "question_number": 2,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "out.println((-17 % 7) | (11 << 3));",
+    "options": [
+      "91",
+      "-3",
+      "88",
+      "-91",
+      "There is no output due to a compile error."
+    ],
+    "topic": "Simple literal math expression"
+  },
+  {
+    "question_number": 3,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "out.printf(\"\\\\%%f = \\%f\", 2, 'c');",
+    "options": [
+      "\\%f = %f",
+      "\\%f = 2.0",
+      "The code fails to compile when it attempts to resolve the escape sequence “\\%”.",
+      "The code fails to compile since unused arguments are passed to the printf() function.",
+      "The code fails to compile when it attempts to resolve the format conversion of “%%”"
+    ],
+    "topic": "Simple Output"
+  },
+  {
+    "question_number": 4,
+    "question_text": "Assuming that indented lines are continuations of the previous line, what is output by the code to the right?",
+    "code_snippet": "String s1 = %^% \"hEllo thEre... GEnEral KEnobi\";%^%String s2 = s1.toLowerCase();%^%String[] arr1 = s1.split(\"E\");%^%String[] arr2 = s2.split(\"E\");%^%int diff = arr1.length - %^% arr2.length;%^%out.println(diff);",
+    "options": [
+      "-6",
+      "-5",
+      "5",
+      "6",
+      "There is no output due to a compile error."
+    ],
+    "topic": "String class methods"
+  },
+  {
+    "question_number": 5,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "int num1 = 5, num2 = 6;%^%int num3 = (num1 & num2) >> 2;%^%boolean a = (boolean) num3;%^%boolean b = false;%^%out.println((a ^ !b) || (b & a));",
+    "options": [
+      "true",
+      "false",
+      "There is no output due to a compile error.",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "Simple Boolean Logic"
+  },
+  {
+    "question_number": 6,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "long num1 = Math.floorDiv(7, 3);%^%double num2 = Math.pow(2, 3);%^%out.println(Math.min(num1, num2));",
+    "options": [
+      "2",
+      "2.0",
+      "8",
+      "8.0",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "Math class methods"
+  },
+  {
+    "question_number": 7,
+    "question_text": "Assuming that indented lines are continuations of the previous line, what is output by the code to the right?",
+    "code_snippet": "int alpha = 10;%^%int beta = ++alpha;%^%int gamma = alpha++;%^%out.println(alpha + \" \" + beta %^% + \" \" + gamma);",
+    "options": ["10 10 11", "10 11 11", "10 11 12", "12 10 11", "12 11 11"],
+    "topic": "Simple variable expression"
+  },
+  {
+    "question_number": 8,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "double gpa = 3.961;%^%String latinHonors = \"none\";%^%switch(gpa) {%^% case 3.731: {%^% latinHonors = \"Cum Laude\";%^% break;%^% }%^% case 3.886: {%^% latinHonors = \"Magna Cum Laude\";%^% break;%^% }%^% case 3.976: {%^% latinHonors = \"Summa Cum Laude\";%^% break;%^% }%^%}%^%out.println(latinHonors);",
+    "options": [
+      "none",
+      "Cum Laude",
+      "Magna Cum Laude",
+      "Summa Cum Laude",
+      "There is no output due to a compile error."
+    ],
+    "topic": "Conditionals"
+  },
+  {
+    "question_number": 9,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "for(int off = 1; off < 25; off *= 2) {%^% out.print(('A' + off) + \" \");%^%}%^%out.println();%^%for(int off = 1; off < 25; off *= 2) {%^% out.print((off + 'A') + \" \");%^%}",
+    "options": [
+      "66 67 69 73 81 %^% 66 67 69 73 81",
+      "66 67 69 73 81 %^% B C E I Q",
+      "B C E I Q %^% 66 67 69 73 81",
+      "B C E I Q %^% B C E I Q",
+      "None of the above."
+    ],
+    "topic": "Simple output loop"
+  },
+  {
+    "question_number": 10,
+    "question_text": "Which of the following best describes the first issue with the code to the right? That is, which error, if any, is both accurate in its description and will cause the code to break at the earliest point possible?",
+    "code_snippet": "int[] a = new int[] {}; // line 1%^%int[] b = new int[-1]; // line 2%^%a[0] = 1; // line 3%^%b[-1] = 1; // line 4",
+    "options": [
+      "line 1 will cause a compilation error.",
+      "line 2 will cause a compilation error.",
+      "line 2 will cause a runtime error.",
+      "line 3 will cause a runtime error.",
+      "line 4 will cause a compilation error.",
+      "line 4 will cause a runtime error.",
+      "None of the above."
+    ],
+    "topic": "1D primitive array"
+  },
+  {
+    "question_number": 11,
+    "question_text": "Assume that the program for the code to the right is compiled and ran from the directory /usr/uil/inv_b/written, and assume that there is another file located at /usr/uil/inv_b/written/in/q11.txt. You may assume that the only other files that exist are those that are necessary to run and compile Java on an Operating System. What is output by the code to the right?",
+    "code_snippet": "File f1 = new File(\"in/q11.txt\"); // line 1%^%if(f1.exists()) {%^% out.println(\"File 1 exists!\");%^%} else {%^% out.println(\"File 1 does not exist...\");%^%}%^%File f2 = new File(\"q11.txt\"); // line 2%^%if(f2.exists()) {%^% out.println(\"File 2 exists!\");%^%} else {%^% out.println(\"File 2 does not exist...\");%^%}",
+    "options": [
+      "File 1 exists! %^% File 2 exists!",
+      "File 1 exists! %^% File 2 does not exist...",
+      "File 1 does not exist... %^% File 2 exists!",
+      "File 1 does not exist... %^% File 2 does not exist...",
+      "line 1 will cause a runtime error (IOException).",
+      "line 2 will cause a runtime error (IOException)."
+    ],
+    "topic": "input concepts"
+  },
+  {
+    "question_number": 12,
+    "question_text": "You may assume that the line commented with // cont. is a continuation of the line above it. What is output by the code to the right?",
+    "code_snippet": "int[] arr = new int[] {1, 2, 3, 4,%^% 5, 6, 7, 8, 9, 10}; // cont.%^%int[] pre = new int[arr.length];%^%pre[0] = arr[0];%^%for(int i = 1; i < arr.length; i++) {%^% pre[i] = pre[i-1] + arr[i];%^%}%^%out.println(pre[7] – pre[3] + arr[9]);",
+    "options": ["4", "26", "32", "36", "59"],
+    "topic": "1D primitive array"
+  },
+  {
+    "question_number": 13,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "out.println(~3 & 4 >> 2);",
+    "options": ["-1", "0", "1", "4", "1073741823"],
+    "topic": "order of operations"
+  },
+  {
+    "question_number": 14,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "int a = Integer.MAX_VALUE;%^%int b = Integer.MIN_VALUE;%^%int c = a + 1;%^%if(c >= a)%^% out.println(\"Option 1\");%^%else if(c >= b);%^% out.println(\"Option 2\");%^%if(c == a)%^% out.println(\"Option 3\");%^%else if(c == b)%^% out.println(\"Option 4\");",
+    "options": [
+      "Option 1",
+      "Option 2",
+      "Option 1 %^% Option 3",
+      "Option 2 %^% Option 4",
+      "The program terminates successfully without creating any output."
+    ],
+    "topic": "java specific data type concepts"
+  },
+  {
+    "question_number": 15,
+    "question_text": "Which of the following can replace <?*> so that the code to the right compiles and produces the output \"[2.3, 1]\"?",
+    "code_snippet": "ArrayList< <?*> > ratings;%^%ratings = new ArrayList< <?*> >();%^%ratings.add(2.3); ratings.add(1);%^%out.println(ratings);",
+    "options": [
+      "Integer",
+      "Double",
+      "Comparable",
+      "? extends Comparable",
+      "None of the above."
+    ],
+    "topic": "ArrayList"
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "question_number": 2,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "out.println(3+4 % 1+2 * 5+6);",
+    "options": [
+      "55",
+      "11",
+      "7",
+      "19",
+      "There is no output due to a compile error."
+    ],
+    "topic": "Simple literal math expression"
+  },
+  {
+    "question_number": 3,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "out.printf(\"%.3f\",2.34567);",
+    "options": [
+      "2.346",
+      "2.34567",
+      "2.34",
+      "2.345",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "Simple Output"
+  },
+  {
+    "question_number": 4,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "String a = \"Chilis\";%^%String b = \"BabyBackRibs\";%^%b = b.substring(3, 11);%^%a = b + a.substring(2);%^%out.println(a);",
+    "options": [
+      "BackRiblis",
+      "BackRilis",
+      "yBackRibilis",
+      "yBackRiilis",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "String class methods"
+  },
+  {
+    "question_number": 5,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "boolean a = true;%^%boolean b = a ^ !a;%^%a = a | b & !a | !b;%^%out.println(a);",
+    "options": ["true", "false", "There is no output due to a syntax error."],
+    "topic": "Simple Boolean Logic"
+  },
+  {
+    "question_number": 6,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "double a = 2.45;%^%out.println(Math.ceil(a));",
+    "options": [
+      "3",
+      "2.5",
+      "3.0",
+      "2.0",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "Math class methods"
+  },
+  {
+    "question_number": 7,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "int i = 10;%^%if(i++ == 11)%^%  out.print(1);%^%else if(i++ == 11);%^%  out.print(2);%^%out.println(i);",
+    "options": [
+      "212",
+      "112",
+      "1212",
+      "211",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "Conditionals"
+  },
+  {
+    "question_number": 8,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "int a = 17 - 8 * 3;%^%int b = a + 11 / 2;%^%out.println(a * b);",
+    "options": [
+      "864",
+      "-14",
+      "513",
+      "14",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "Simple variable expression"
+  },
+  {
+    "question_number": 9,
+    "question_text": "How many *s are output by the code to the right?",
+    "code_snippet": "for(int y = 0; y < 12; y++)%^%  for(int c = 1; c < y; c *= 2)%^%    out.print(\"*\");%^%out.println();",
+    "options": [
+      "27",
+      "33",
+      "29",
+      "30",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "Simple output loop"
+  },
+  {
+    "question_number": 10,
+    "question_text": "What is the output by the code to the right?",
+    "code_snippet": "int[] i = new int[] {%^% 17, 12, 9, 8, 39, 3%^%};%^%i[2] += i[4];%^%i[1] -= i[3];%^%int b = i[2];%^%b += i[1] + i[5];%^%out.println(b);",
+    "options": [
+      "55",
+      "67",
+      "7",
+      "There is no output due to a compile error.",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "1D primitive array"
+  },
+  {
+    "question_number": 11,
+    "question_text": "Which of the following packages contains the File class?",
+    "code_snippet": null,
+    "options": [
+      "java.lang.*",
+      "java.awt.*",
+      "java.util.*",
+      "java.io.*",
+      "None of the above."
+    ],
+    "topic": "input concepts"
+  },
+  {
+    "question_number": 12,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "int sum = 1;%^%for(int y = 0; y < 15; y++)%^%  for(int x = 0; x < y; x++)%^%    sum += x;%^%out.println(sum);",
+    "options": [
+      "456",
+      "106",
+      "561",
+      "121",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "accumulation loop"
+  },
+  {
+    "question_number": 13,
+    "question_text": "What is the order of precedence for the operators to the right?",
+    "code_snippet": "I. || (logical)%^%II. ++ (post)%^%III. & (bitwise)%^%IV. -- (pre)",
+    "options": [
+      "II, IV, III, I",
+      "IV, II, I, III",
+      "IV, II, III, I",
+      "III, II, IV, I",
+      "II, IV, I, III"
+    ],
+    "topic": "order of operations"
+  },
+  {
+    "question_number": 14,
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "out.println(Integer.SIZE);",
+    "options": [
+      "8",
+      "64",
+      "16",
+      "32",
+      "There is no output due to a runtime error."
+    ],
+    "topic": "java specific data type concepts"
+  },
+  {
+    "question_number": 15,
+    "question_text": "What is the output by the code to the right?",
+    "code_snippet": "ArrayList<String> a;%^%a = new ArrayList<String>();%^%a.add(\"A\");%^%a.add(\"B\");%^%a.add(\"C\");%^%a.remove(1);%^%a.add(\"D\");%^%out.println(a);",
+    "options": [
+      "[B, C, D]",
+      "[D, C, A]",
+      "[A, C, D]",
+      "[D, B, A]",
+      "There is no output due to a compile error."
+    ],
+    "topic": "ArrayList"
+  }
+]
