@@ -1,0 +1,195 @@
+[
+  {
+    "question_number": 2,
+    "topic": "Simple literal math expression",
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "out.print(243+34 / 21-9 * 21-17);",
+    "options": [
+      "16",
+      "5",
+      "38",
+      "92",
+      "There is no output due to a compile error."
+    ],
+    "correct": "38"
+  },
+  {
+    "question_number": 3,
+    "topic": "Simple Output",
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "String s = \"Yep\";%^%int i = 89;%^%double d = 1.25;%^%out.printf(\"%3$.1f%1$S%2$c\",s,i,d);",
+    "options": [
+      "1.2YEPZ",
+      "1.2YepY",
+      "1.3YEPY",
+      "1.3YepZ",
+      "There is no output due to a runtime error."
+    ],
+    "correct": "1.3YEPY"
+  },
+  {
+    "question_number": 4,
+    "topic": "String class methods",
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "String s = \"CaptHanSolo\";%^%String r = \"CaptHandsome\";%^%int i = s.compareTo(r);%^%out.println(i);",
+    "options": [
+      "-17",
+      "-1",
+      "17",
+      "1",
+      "There is no output due to a compile error."
+    ],
+    "correct": "-17"
+  },
+  {
+    "question_number": 5,
+    "topic": "Simple Boolean Logic",
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "boolean a = false;%^%boolean b = true;%^%a |= a ^ b & !b | a;%^%b ^= b ^ !a & a | !b;%^%out.print(a ^ b | a);",
+    "options": [
+      "true",
+      "false"
+    ],
+    "correct": "false"
+  },
+  {
+    "question_number": 6,
+    "topic": "Math class methods",
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "double c = 4.5;%^%c = Math.nextAfter(c, -7);%^%String s = \"\" + c;%^%s = s.substring(0, 4);%^%out.printf(\"%.2f %s\",c,s);",
+    "options": [
+      "4.00 4.00",
+      "4.50 4.49",
+      "4.50 4.50",
+      "-3.50 -3.5",
+      "There is no output due to a runtime error."
+    ],
+    "correct": "4.50 4.49"
+  },
+  {
+    "question_number": 7,
+    "topic": "Conditionals",
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "int i = -7;%^%if(i < 0 | i++ > -10)%^%    out.print(1);%^%if(i > 0 && i-- < 10)%^%    out.print(2);%^%else out.print(3);%^%out.print(i);",
+    "options": [
+      "12-7",
+      "13-7",
+      "2-7",
+      "13-6",
+      "3-6"
+    ],
+    "correct": "13-6"
+  },
+  {
+    "question_number": 8,
+    "topic": "Simple variable expression",
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "int i = 212;%^%i &= i - 7 << 4;%^%i %= i ^ 123 - 17;%^%out.print(i | 13);",
+    "options": [
+      "54",
+      "63",
+      "31",
+      "22",
+      "There is no output due to a runtime error."
+    ],
+    "correct": "31"
+  },
+  {
+    "question_number": 9,
+    "topic": "1D primitive array",
+    "question_text": "What is output by the line marked `//q09` in the code to the right?",
+    "code_snippet": "int[][] mat = new int[3][5];%^%for(int r = 0; r < 3; r++)%^%    for(int c = 4; c >= 0; c--)%^%        mat[r][c] =%^%            (r + 1) * 5 + (c - 1) * c - 2;%^%out.println%^%    (Arrays.toString(mat[2])); //q09%^%for(int i = 0; i < 4; i ++) {%^%    if(i != 3) {%^%        mat[i][i] = mat[i][i + 1];%^%        mat[i][i]--;%^%    } if(i != 0) {%^%        mat[i - 1][i + 1] =%^%            mat[i - 1][i - 1];%^%        mat[i - 1][i]++;%^%    }%^%    mat[0][i] += i;%^%    mat[1][i] -= i;%^%}%^%out.println%^%    (Arrays.toString(mat[1])); //q10",
+    "options": [
+      "[13, 13, 15, 19, 25]",
+      "[8, 8, 10, 14, 20]",
+      "[17, 15, 15, 17, 21]",
+      "[12, 10, 10, 12, 16]",
+      "There is no output due to a runtime error."
+    ],
+    "correct": "[13, 13, 15, 19, 25]"
+  },
+  {
+    "question_number": 10,
+    "topic": "1D primitive array",
+    "question_text": "What is output by the line marked `//q10` in the code to the right?",
+    "code_snippet": "int[][] mat = new int[3][5];%^%for(int r = 0; r < 3; r++)%^%    for(int c = 4; c >= 0; c--)%^%        mat[r][c] =%^%            (r + 1) * 5 + (c - 1) * c - 2;%^%out.println%^%    (Arrays.toString(mat[2])); //q09%^%for(int i = 0; i < 4; i ++) {%^%    if(i != 3) {%^%        mat[i][i] = mat[i][i + 1];%^%        mat[i][i]--;%^%    } if(i != 0) {%^%        mat[i - 1][i + 1] =%^%            mat[i - 1][i - 1];%^%        mat[i - 1][i]++;%^%    }%^%    mat[0][i] += i;%^%    mat[1][i] -= i;%^%}%^%out.println%^%    (Arrays.toString(mat[1])); //q10",
+    "options": [
+      "[8, 6, 9, 3, 20]",
+      "[8, 9, 8, 6, 20]",
+      "[12, 8, 9, 5, 16]",
+      "[8, 8, 9, 5, 20]",
+      "There is no output due to a runtime error."
+    ],
+    "correct": "[8, 8, 9, 5, 20]"
+  },
+  {
+    "question_number": 11,
+    "topic": "input concepts",
+    "question_text": "Which of the following could replace `<1*>` for the code to the right to compile without error?",
+    "code_snippet": "public void scan()throws <1*>{%^%    File f = new File(\"a.dat\");%^%    Scanner sc = new Scanner(f);%^%    sc.nextLine();%^%    out.print(sc.nextLine());%^%}",
+    "options": [
+      "IOException",
+      "FileNotFoundException",
+      "Exception",
+      "Only A or C.",
+      "Any of the above will work."
+    ],
+    "correct": "Any of the above will work."
+  },
+  {
+    "question_number": 12,
+    "topic": "Conditionals",
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "int i = 4;%^%switch(5) {%^%    case 4: i += 10;%^%    case 2: i++;%^%        break;%^%    default: i += 100;%^%}%^%out.print(i);",
+    "options": [
+      "4",
+      "104",
+      "15",
+      "105",
+      "There is no output due to a compile error."
+    ],
+    "correct": "104"
+  },
+  {
+    "question_number": 13,
+    "topic": "order of operations",
+    "question_text": "What is the order of precedence for the operators to the right?\n\n- I. `==`\n- II. `+=`\n- III. `<=`\n- IV. `?:` (ternary)",
+    "code_snippet": null,
+    "options": [
+      "III, II, I, IV",
+      "I, III, IV, II",
+      "III, I, II, IV",
+      "III, I, II, IV",
+      "III, I, IV, II"
+    ],
+    "correct": "III, I, IV, II"
+  },
+  {
+    "question_number": 14,
+    "topic": "java specific data type concepts",
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "int[] sizes = new int[] {%^%    Double.BYTES, Float.BYTES,%^%    Long.BYTES, Integer.BYTES,%^%    Short.BYTES, Byte.BYTES%^%};%^%Arrays.sort(sizes);%^%out.print(sizes[0]+sizes[2]);",
+    "options": [
+      "5",
+      "3",
+      "8",
+      "6",
+      "There is no output due to a compile error."
+    ],
+    "correct": "5"
+  },
+  {
+    "question_number": 15,
+    "topic": "ArrayList",
+    "question_text": "What is output by the code to the right?",
+    "code_snippet": "ArrayList<String> a;%^%a = new ArrayList<String>();%^%a.add(\"Bumblebee\");%^%a.add(\"Optimus\");%^%a.add(1,\"RC\");%^%a.set(0, \"Ironhide\");%^%if(!a.contains(new String(\"RC\")))%^%    a.add(1, \"RC\");%^%out.println(a);",
+    "options": [
+      "[Ironhide, RC, Bumblebee, RC, Optimus]",
+      "[Ironhide, RC, RC, Optimus]",
+      "[Ironhide, RC, Optimus]",
+      "[Ironhide, Bumblebee, RC, Optimus]",
+      "There is no output due to a runtime error."
+    ],
+    "correct": "[Ironhide, RC, Optimus]"
+  }
+]
