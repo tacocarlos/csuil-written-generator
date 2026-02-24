@@ -1,0 +1,10 @@
+\begin{questions}    
+    \foreach \year in \years {
+        \safeimport{out/\topic/}{\year invA.tex}
+        \safeimport{out/\topic/}{\year invB.tex}
+        \safeimport{out/\topic/}{\year District.tex}
+        \safeimport{out/\topic/}{\year Region.tex}
+        \safeimport{out/\topic/}{\year State.tex}
+    }
+    \newpage
+\end{questions}

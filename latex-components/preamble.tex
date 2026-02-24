@@ -1,5 +1,4 @@
-%\documentclass[12pt]{article}
-\documentclass[answers, 12pt]{exam}
+% \documentclass[answers, 12pt]{exam}
 \title{CS UIL Packet}
 \nonstopmode
 %\usepackage[utf-8]{inputenc}
@@ -32,7 +31,10 @@
 
 \newtoggle{separatePages}
 % \toggletrue{separatePages}
-% \togglefalse{separatePages}
+\togglefalse{separatePages}
+
+\newtoggle{key}
+\toggletrue{key}
 
 \newcommand{\safeimport}[2]{
     \IfFileExists{#1/#2}{
@@ -77,58 +79,12 @@
     \iftoggle{separatePages}{\newpage}
 }
 
-\newenvironment{code}{
-    \begin{minted}{java}   
-}{\end{minted}}
+\newenvironment{code}{\begin{minted}{java}}{\end{minted}}
+
+\newcommand{\correct}[1]{
+    \iftoggle{key}{\textbf{#1 \checkmark}}{#1}
+}
 
 \newcommand{\HeaderPage}[1]{
     \centering \textbf{#1}
 }
-
-
-
-% --- End of command definition ---
-
-\def\years{2025, 2024, 2023}
-
-% \def\topics{simple_literal_math_expression, simple_output, string_class_methods, simple_boolean_logic, math_class_methods, simple_variable_expression, conditionals, simple_output_loop, 1d_primitive_array, input_concepts, accumulation_loop, order_of_operations, java_specific_data_type_concepts, arraylist}
-
-\def\topic{simple_literal_math_expression}
-% \def\topic{simple_output}
-% \def\topic{string_class_methods}
-% \def\topic{simple_boolean_logic}
-% \def\topic{math_class_methods}
-% \def\topic{simple_variable_expression}
-% \def\topic{conditionals}
-% \def\topic{simple_output_loop}
-% \def\topic{1d_primitive_array}
-% \def\topic{input_concepts}
-% \def\topic{accumulation_loop}
-% \def\topic{order_of_operations}
-% \def\topic{java_specific_data_type_concepts}
-% \def\topic{arraylist}
-\begin{document}
-\begin{center}
-	\hrule
-	\vspace{.4cm}
-	{\textbf { \large Computer Science UIL - Simple Literal Math Problems}}
-\end{center}
-{\textbf{Name:}\  \hspace{\fill} \textbf{Due Date:} February 27th   \\
-\hrule
-\newpage
-
-% \foreach \topic in \topics {
-\begin{questions}    
-    \foreach \year in \years {
-        \safeimport{out/\topic/}{\year invA.tex}
-        \safeimport{out/\topic/}{\year invB.tex}
-        \safeimport{out/\topic/}{\year District.tex}
-        \safeimport{out/\topic/}{\year Region.tex}
-        \safeimport{out/\topic/}{\year State.tex}
-    }
-    \newpage
-\end{questions}
-% }
-
-\end{document}
-
