@@ -1,0 +1,114 @@
+[
+  {
+    "question_number": 2,
+    "topic": "Simple literal math expression",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "out.print(11 + 17 % 7 * 31 / 10);",
+    "options": ["0", "20", "28", "42", "There is no output due to a runtime error"],
+    "correct": "20"
+  },
+  {
+    "question_number": 3,
+    "topic": "Simple Output",
+    "question_text": "How many lines are printed by the code to the right?",
+    "code_snippet": "out.println(\"\\\\n\");%^%out.println(\"\\n\");%^%out.printf(\"%.2f\",2.718);%^%out.println(\"E\");",
+    "options": ["1", "2", "3", "4", "5"],
+    "correct": "4"
+  },
+  {
+    "question_number": 4,
+    "topic": "String class methods",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "int it = 3;%^%String base = \"banana\";%^%for(int i = 0;i<it;i++)%^%{%^%  base = base.replace(\"a\",\"ba\");%^%  base = base.replace(\"b\",\"bb\");%^%}%^%out.print(base.length());",
+    "options": ["48", "50", "53", "55", "56"],
+    "correct": "55"
+  },
+  {
+    "question_number": 5,
+    "topic": "Simple Boolean Logic",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "boolean t = true;%^%boolean f = false;%^%boolean x = t ^ f;%^%out.print(!((t ^ x ^ t)||(!f && t ^ !x)));",
+    "options": ["true", "false"],
+    "correct": "false"
+  },
+  {
+    "question_number": 6,
+    "topic": "Math class methods",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "out.print(Math.sqrt(81*81*81));",
+    "options": ["9.0", "81.0", "108.0", "172.0", "729.0"],
+    "correct": "729.0"
+  },
+  {
+    "question_number": 7,
+    "topic": "Simple variable expression",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "int x = 7;%^%double y = 9.0;%^%out.printf(\"%.2f\",x / 2 + x / y);",
+    "options": ["3.00", "3.50", "3.78", "4.28", "There is no output due to an error"],
+    "correct": "3.78"
+  },
+  {
+    "question_number": 8,
+    "topic": "Conditionals",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "int what = switch(\"Java13\"){%^%  case \"Java13\" -> {%^%    out.print(\"hello \");%^%    yield 1;%^%  }%^%  default -> {%^%    out.print(\"world\");%^%    yield 2;%^%  }%^%};%^%out.print(what);",
+    "options": ["hello world 1", "hello world 2", "hello 1", "hello 2", "There is no output due to a compile error"],
+    "correct": "hello 1"
+  },
+  {
+    "question_number": 9,
+    "topic": "Simple output loop",
+    "question_text": "How many asterisks are printed by the code shown to the right?",
+    "code_snippet": "for(int x = 1; x <= 42;x++)%^%{%^%  for(int y = 0;y<x;y++){%^%    out.print(\"*\");%^%  }%^%}",
+    "options": ["42", "790", "882", "903", "912"],
+    "correct": "903"
+  },
+  {
+    "question_number": 10,
+    "topic": "1D primitive array",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "int[] ints = new int[]{2,7,1,8};%^%ints[0] += (ints[1] -= ints[2]);%^%out.print(Arrays.toString(ints));",
+    "options": ["[8, 6, 1, 8]", "[9, 6, 1, 8]", "[8, 7, 1, 8]", "[2, 7, 1, 8]", "There is no output due to an error."],
+    "correct": "[8, 6, 1, 8]"
+  },
+  {
+    "question_number": 11,
+    "topic": "input concepts",
+    "question_text": "Consider the main method shown above. Suppose `data.dat` contains: `\"121 33 404\"`. What is the output of the code?\n\n```java\npublic static void main(String[] args) throws IOException\n{\n    Scanner f = new Scanner(new File(\"data.dat\"));\n    int x = 0;\n    for(int i = 3;i<=5;i++)\n    {\n        x += f.nextInt(i);\n    }\n    out.println(x);\n}\n```",
+    "code_snippet": null,
+    "options": ["0", "135", "148", "558", "There is no output due to an error"],
+    "correct": "135"
+  },
+  {
+    "question_number": 12,
+    "topic": "accumulation loop",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "int x = 1;%^%int y = 3;%^%do{%^%  x *= y;%^%  x += --y;%^%}while(7 % y != 1);%^%out.print(x+y);",
+    "options": ["4", "5", "6", "7", "8"],
+    "correct": "7"
+  },
+  {
+    "question_number": 13,
+    "topic": "order of operations",
+    "question_text": "What is the correct order of operations for the operators listed on the right?\n\n- I. `+=`\n- II. `<<`\n- III. `<=`",
+    "code_snippet": null,
+    "options": ["I II III", "II III I", "III II I", "II I III", "III I II"],
+    "correct": "II III I"
+  },
+  {
+    "question_number": 14,
+    "topic": "java specific data type concepts",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "byte x = (byte)(12);%^%out.print(x *= x);",
+    "options": ["-113", "-112", "-111", "144", "There is no output due to an error"],
+    "correct": "-112"
+  },
+  {
+    "question_number": 15,
+    "topic": "ArrayList",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "ArrayList<Integer> list;%^%list = new ArrayList<Integer>();%^%ListIterator<Integer> it;%^%it = list.listIterator();%^%it.add(1);%^%it.add(2);%^%it.previous();%^%it.add(3);%^%it.next();%^%it.add(4);%^%out.println(list);",
+    "options": ["[1, 3, 2, 4]", "[1, 2, 3, 4]", "[1, 4, 3, 2]", "[1, 3, 4, 2]", "There is no output due to an error."],
+    "correct": "[1, 3, 2, 4]"
+  }
+]
