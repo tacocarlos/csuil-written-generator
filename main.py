@@ -26,9 +26,9 @@ def generate_packet_tex(topic: str, years: list[int],print_key=False, debug=Fals
     print(f"Generating {topic} packet...")
     with open(f"{topic.lower().replace(' ', '_')}-problem-packet.tex", "w") as output_tex:
         if print_key:
-            output_tex.write("\\documentclass[answers, 12pt]{{exam}}\n")
+            output_tex.write("\\documentclass[answers, 12pt]{exam}\n")
         else:
-            output_tex.write("\\documentclass[12pt]{{exam}}\n")
+            output_tex.write("\\documentclass[12pt]{exam}\n")
 
         with open("./latex-components/preamble.tex") as preamble:
             output_tex.write(preamble.read())
@@ -41,7 +41,7 @@ def generate_packet_tex(topic: str, years: list[int],print_key=False, debug=Fals
 
         years_str = ", ".join(str(year) for year in years)
         output_tex.write(f"\\def\\years{{{years_str}}}\n")
-        output_tex.write(f"\\def\\topic{{{topic}}}\n")
+        output_tex.write(f"\\def\\topic{{{topic.lower().replace(' ', '_')}}}\n")
         output_tex.write("\\begin{document}\n")
 
         with open("./latex-components/title.tex") as title:
