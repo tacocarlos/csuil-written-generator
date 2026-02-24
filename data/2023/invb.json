@@ -1,0 +1,126 @@
+[
+  {
+    "question_number": 2,
+    "topic": "Simple literal math expression",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "out.print(1 + 29 % 10 / 4 + 3);",
+    "options": ["3", "4", "5", "6", "6.25"],
+    "correct": "6"
+  },
+  {
+    "question_number": 3,
+    "topic": "Simple Output",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "out.print(\"Blue\\nRed\\nGreen\");%^%out.print(\"Yellow\\nPurple\");%^%out.print(\"Orange\");",
+    "options": [
+      "Blue%^%Red%^%GreenYellow%^%PurpleOrange",
+      "Blue%^%Red%^%Green%^%Yellow%^%PurpleOrange",
+      "Blue%^%Red%^%Green%^%YellowPurple%^%Orange",
+      "BlueRed%^%GreenYellowPurpleOrange",
+      "Blue%^%Red%^%GreenYellowPurple%^%Orange"
+    ],
+    "correct": "Blue%^%Red%^%GreenYellow%^%PurpleOrange"
+  },
+  {
+    "question_number": 4,
+    "topic": "String class methods",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "String str = \"Scholastic\";%^%out.print(str.indexOf(\"c\",2));",
+    "options": ["1", "2", "7", "8", "9"],
+    "correct": "9"
+  },
+  {
+    "question_number": 5,
+    "topic": "Simple Boolean Logic",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "boolean A = true;%^%boolean B = !A;%^%out.print(!A && (A || B) ^ B);",
+    "options": ["true", "false"],
+    "correct": "false"
+  },
+  {
+    "question_number": 6,
+    "topic": "Math class methods",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "double M = Math.sqrt(31);%^%out.print((int)Math.floor(M));",
+    "options": ["5", "5.0", "6", "6.0", "15"],
+    "correct": "5"
+  },
+  {
+    "question_number": 7,
+    "topic": "Simple variable expression",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "double T = 2.2;%^%double A = 8 * 4 / 10 + 1 + T;%^%out.print(A);",
+    "options": ["6.4", "3.2", "6.2", "6.0", "6"],
+    "correct": "6.2"
+  },
+  {
+    "question_number": 8,
+    "topic": "Conditionals",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "int Q = 20 % 7;%^%switch (Q)%^%{%^%    case 1:out.print(\"A\");%^%    case 2:out.print(\"B\");%^%    case 3:out.print(\"C\");%^%    case 4:out.print(\"D\");%^%    case 5:out.print(\"E\");%^%    case 6:out.print(\"F\");%^%    default:out.print(\"G\");%^%}",
+    "options": ["B", "BCDEF", "BCDEFG", "F", "FG"],
+    "correct": "FG"
+  },
+  {
+    "question_number": 9,
+    "topic": "Simple output loop",
+    "question_text": "How many x's will be output of the code segment to the right?",
+    "code_snippet": "for(int x = 50; x > 2; x = x / 2 + 1)%^%    out.print(\"x\");",
+    "options": ["4", "5", "6", "7", "12"],
+    "correct": "6"
+  },
+  {
+    "question_number": 10,
+    "topic": "1D primitive array",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "int[] four = {4,8,12,16,20,24,28};%^%int[] five = {5,10,15,20,25,30,35};%^%if (four.length<five.length)%^%    out.print(four[4]+five[5]);%^%else%^%    out.print(four[5]+five[4]);",
+    "options": ["49", "45", "41", "40", "36"],
+    "correct": "49"
+  },
+  {
+    "question_number": 11,
+    "topic": "input concepts",
+    "question_text": "What is output by the code segment to the right?",
+    "code_snippet": "String St = \"12 24 36 48\";%^%Scanner go = new Scanner(St);%^%out.print(go.nextInt() + go.nextInt());%^%out.print(go.next() + go.next());",
+    "options": ["3684", "12243648", "361224", "363648", "3636"],
+    "correct": "363648"
+  },
+  {
+    "question_number": 12,
+    "topic": "accumulation loop",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "int sum = 0;%^%for(int x = 1; x <= 50; x = x * 2)%^%    sum += x + 10;%^%out.print(sum);",
+    "options": ["113", "123", "73", "197", "63"],
+    "correct": "123"
+  },
+  {
+    "question_number": 13,
+    "topic": "order of operations",
+    "question_text": "What is the output of the code segment to the right?",
+    "code_snippet": "int a = 15, b = 12, c = 9;%^%out.print(c ^ b | a - c & b ^ a);",
+    "options": ["11", "12", "13", "14", "15"],
+    "correct": "15"
+  },
+  {
+    "question_number": 14,
+    "topic": "java specific data type concepts",
+    "question_text": "What is the output of the code segment shown on the right?",
+    "code_snippet": "out.println(Byte.MIN_VALUE + 127);",
+    "options": ["0", "1", "-1", "127", "-129"],
+    "correct": "-1"
+  },
+  {
+    "question_number": 15,
+    "topic": "ArrayList",
+    "question_text": "What is output by the code segment to the right?",
+    "code_snippet": "ArrayList<Integer> messi;%^%messi = new ArrayList<Integer>();%^%messi.add(10);%^%messi.add(12);%^%messi.add(messi.get(1));%^%messi.add(14);%^%messi.remove(0);%^%messi.add(16);%^%messi.add(10);%^%messi.add(0,messi.get(0)-2);%^%out.println(messi);",
+    "options": [
+      "[12, 10, 14, 16, 10]",
+      "[10, 12, 10, 14, 16, 10]",
+      "[12, 12, 14, 16, 10]",
+      "[10, 12, 12, 14, 16, 10]",
+      "[10, 12, 14, 16, 10]"
+    ],
+    "correct": "[10, 12, 12, 14, 16, 10]"
+  }
+]

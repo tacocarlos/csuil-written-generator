@@ -9,5 +9,11 @@ wheels/
 # Virtual environments
 .venv
 
-# output directory of latex files
+# output directories
 out/
+latex-output/
+_minted-main/
+.ipynb_checkpoints/
+
+# editor files
+.vscode/

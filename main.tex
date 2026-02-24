@@ -1,0 +1,173 @@
+
+
+%\documentclass[12pt]{article}
+\documentclass[answers, 12pt]{exam}
+\title{CS UIL Packet}
+\nonstopmode
+%\usepackage[utf-8]{inputenc}
+\usepackage{graphicx} % Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{float}    % For tables and other floats
+\usepackage{verbatim} % For comments and other
+\usepackage{amsmath}  % For math
+\usepackage{minted}
+\usepackage{amssymb}  % For more math
+\usepackage{fullpage} % Set margins and place page numbers at bottom center
+\usepackage{paralist} % paragraph spacing
+\usepackage{listings} % For source code
+\usepackage{subfig}   % For subfigures
+%\usepackage{physics}  % for simplified dv, and 
+\usepackage{enumitem} % useful for itemization
+\usepackage{siunitx}  % standardization of si units
+\usepackage{pgffor}
+\usepackage{etoolbox}
+\usepackage{import}
+
+\usepackage{tikz,bm} % Useful for drawing plots
+%\usepackage{tikz-3dplot}
+\usepackage{circuitikz}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}   % For mathematical symbols and subscripts
+\usepackage{tcolorbox} % For the "Question 1" box
+\usepackage[margin=0.67in]{geometry}  % To adjust page margins
+
+\newtoggle{separatePages}
+% \toggletrue{separatePages}
+\togglefalse{separatePages}
+
+\newtoggle{key}
+\toggletrue{key}
+
+\newcommand{\safeimport}[2]{
+    \IfFileExists{#1/#2}{
+        \subimport{#1/}{#2}
+    }{}
+}
+
+% --- Define the new command \questionBlock ---
+% It takes 7 arguments:
+% #1: Question number
+% #2: The main question text
+% #3: Option A
+% #4: Option B
+% #5: Option C
+% #6: Option D
+% #7: Option E
+\newcommand{\questionBlock}[7]{%
+    \par\noindent % Ensure we start on a new paragraph
+    % Create the black box with white, bold text for the question number
+    \begin{tcolorbox}[
+        colback=white,       % Background color
+        coltext=black,       % Text color
+        fontupper=\bfseries, % Bold text
+        sharp corners,       % No rounded corners
+        boxrule=1pt,         % No border line
+        width=5cm,           % Fixed width for the box
+        left=4pt, right=4pt, top=2pt, bottom=2pt, % Internal padding
+        halign=left          % Align text to the left
+    ]
+        Question #1
+    \end{tcolorbox}
+    \vspace{-0.3em} % Add a small negative vertical space to pull the text up
+
+    % Display the main question text
+    \noindent #2
+
+    \vspace{1em} % Vertical space between the question and the options
+
+    % Display the five options in a horizontal row using a tabular environment
+    \noindent
+    \begin{tabular}{@{}p{0.19\linewidth}p{0.19\linewidth}p{0.19\linewidth}p{0.19\linewidth}p{0.19\linewidth}@{}}
+        \textbf{A)} #3 & \textbf{B)} #4 & \textbf{C)} #5 & \textbf{D)} #6 & \textbf{E)} #7
+    \end{tabular}
+    \vspace{2em} % Vertical space after the entire question block
+    \iftoggle{separatePages}{\newpage}
+}
+
+\newenvironment{questionc}{}{}
+
+\newenvironment{qtext}[1]{    
+    \par \noindent
+    \begin{tcolorbox}[
+        colback=white,       % Background color
+        coltext=black,       % Text color
+        fontupper=\bfseries, % Bold text
+        sharp corners,       % No rounded corners
+        boxrule=1pt,         % No border line
+        width=5cm,           % Fixed width for the box
+        left=4pt, right=4pt, top=2pt, bottom=2pt, % Internal padding
+        halign=left          % Align text to the left
+    ]
+        Question #1
+    \end{tcolorbox}
+    \vspace{-0.3em} % Add a small negative vertical space to pull the text up
+    \noindent
+    \question
+}
+
+\newenvironment{qchoices}{\noindent \begin{choices}}{\end{choices}
+\answerline
+    \vspace{2em} % Vertical space after the entire question block   
+    \iftoggle{separatePages}{\newpage}
+}
+
+\newenvironment{code}{
+    \begin{minted}{java}   
+}{\end{minted}}
+
+\newcommand{\correct}[1]{
+    \iftoggle{key}{\textbf{#1 \checkmark}}{#1}
+}
+
+\newcommand{\HeaderPage}[1]{
+    \centering \textbf{#1}
+}
+
+
+
+% --- End of command definition ---
+
+\def\years{2025, 2024, 2023}
+
+% \def\topics{simple_literal_math_expression, simple_output, string_class_methods, simple_boolean_logic, math_class_methods, simple_variable_expression, conditionals, simple_output_loop, 1d_primitive_array, input_concepts, accumulation_loop, order_of_operations, java_specific_data_type_concepts, arraylist}
+
+\def\topic{simple_literal_math_expression}
+% \def\topic{simple_output}
+% \def\topic{string_class_methods}
+% \def\topic{simple_boolean_logic}
+% \def\topic{math_class_methods}
+% \def\topic{simple_variable_expression}
+% \def\topic{conditionals}
+% \def\topic{simple_output_loop}
+% \def\topic{1d_primitive_array}
+% \def\topic{input_concepts}
+% \def\topic{accumulation_loop}
+% \def\topic{order_of_operations}
+% \def\topic{java_specific_data_type_concepts}
+% \def\topic{arraylist}
+\begin{document}
+\begin{center}
+	\hrule
+	\vspace{.4cm}
+	{\textbf { \large Computer Science UIL - Simple Literal Math Problems}}
+\end{center}
+{\textbf{Name:}\  \hspace{\fill} \textbf{Due Date:} February 27th   \\
+\hrule
+\newpage
+
+% \foreach \topic in \topics {
+\begin{questions}    
+    \foreach \year in \years {
+        \safeimport{out/\topic/}{\year invA.tex}
+        \safeimport{out/\topic/}{\year invB.tex}
+        \safeimport{out/\topic/}{\year District.tex}
+        \safeimport{out/\topic/}{\year Region.tex}
+        \safeimport{out/\topic/}{\year State.tex}
+    }
+    \newpage
+\end{questions}
+% }
+
+\end{document}
+
