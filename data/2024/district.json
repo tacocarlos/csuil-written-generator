@@ -4,13 +4,7 @@
     "topic": "Simple literal math expression",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "out.print(12 - 27 + 17 % 10 / 2);",
-    "options": [
-      "-12",
-      "-8",
-      "-4",
-      "1",
-      "2"
-    ],
+    "options": ["-12", "-8", "-4", "1", "2"],
     "correct": "-12"
   },
   {
@@ -19,26 +13,20 @@
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "int A = 14;%^%int B = 16;%^%int C = 9;%^%int D = 9;%^%out.print(A % B);%^%out.print(B % C);%^%out.println(A / D);%^%out.print(C / D);%^%out.println(D % C);%^%out.println(A + B / C + D);",
     "options": [
-      "011\n 11\n 24",
-      "1411\n 10\n 24",
-      "1471\n 11\n 1",
-      "1471\n 10\n 24",
-      "1671\n 10\n 12"
+      "011%^%11%^%24",
+      "1411%^%10%^%24",
+      "1471%^%11%^%1",
+      "1471%^%10%^%24",
+      "1671%^%10%^%12"
     ],
-    "correct": "1471\n 10\n 24"
+    "correct": "1471%^%10%^%24"
   },
   {
     "question_number": 4,
     "topic": "String class methods",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "String St1 = \"KANSAS\";%^%String St2 = \"CITY\";%^%String St3 = St2+St1.substring(0,3);%^%out.print(St3.charAt(5));",
-    "options": [
-      "A",
-      "S",
-      "C",
-      "I",
-      "T"
-    ],
+    "options": ["A", "S", "C", "I", "T"],
     "correct": "A"
   },
   {
@@ -46,10 +34,7 @@
     "topic": "Simple Boolean Logic",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "boolean A = true;%^%boolean B = !A;%^%boolean C = A || B;%^%boolean D = B && C;%^%boolean E = A ^ D;%^%out.print(E);",
-    "options": [
-      "true",
-      "false"
-    ],
+    "options": ["true", "false"],
     "correct": "true"
   },
   {
@@ -57,13 +42,7 @@
     "topic": "accumulation loop",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "int T = 0;%^%for (int x=5; x<=10; x=x+2)%^%  T+=x;%^%out.print(T);",
-    "options": [
-      "18",
-      "21",
-      "24",
-      "28",
-      "35"
-    ],
+    "options": ["18", "21", "24", "28", "35"],
     "correct": "21"
   },
   {
@@ -71,13 +50,7 @@
     "topic": "Math class methods",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "double A = Math.floor(8.7);%^%double B = Math.ceil(A - 0.1);%^%double C = Math.sqrt(A + B);%^%int D = (int) C;%^%out.print(D);",
-    "options": [
-      "2",
-      "4",
-      "8",
-      "10",
-      "16"
-    ],
+    "options": ["2", "4", "8", "10", "16"],
     "correct": "4"
   },
   {
@@ -85,13 +58,7 @@
     "topic": "Conditionals",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "int A = 5;%^%int B = A - 1;%^%int C = B + 2;%^%if (A > B)%^%  C++;%^%if (C < A)%^%  B++;%^%if (B < C)%^%  A++;%^%out.print(A + B + C);",
-    "options": [
-      "14",
-      "15",
-      "16",
-      "17",
-      "18"
-    ],
+    "options": ["14", "15", "16", "17", "18"],
     "correct": "17"
   },
   {
@@ -99,34 +66,22 @@
     "topic": "1D primitive array",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "int[] Stuff = {4,2,1,0,3};%^%int A = Stuff[Stuff[2]];%^%int B = Stuff[Stuff[3]];%^%int C = Stuff[Stuff[0]];%^%out.print(A + B + C);",
-    "options": [
-      "6",
-      "7",
-      "8",
-      "9",
-      "10"
-    ],
+    "options": ["6", "7", "8", "9", "10"],
     "correct": "9"
   },
   {
     "question_number": 10,
-    "topic": "Simple output loop",
+    "topic": "Simple variable expression",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "int[] elf = new int[50];%^%for(int x=0; x<=49; x++)%^%  elf[x] = x * 2 + 5;%^%out.print(elf[10] + elf[20]);",
-    "options": [
-      "60",
-      "65",
-      "70",
-      "75",
-      "80"
-    ],
+    "options": ["60", "65", "70", "75", "80"],
     "correct": "70"
   },
   {
     "question_number": 11,
     "topic": "ArrayList",
     "question_text": "What is output by the code segment to the right?",
-    "code_snippet": "ArrayList<Integer> Fred;%^%Fred = new ArrayList<Integer>();%^%Fred.add(7); Fred.add(5); Fred.add(8);%^%Fred.add(3); Fred.add(9); Fred.add(1);%^%Fred.add(4); Fred.add(0); Fred.add(2);%^%Fred.set(5,2);%^%Fred.add(4,6);%^%for (int x=1; x<=5; x++)%^%  Fred.remove(1);%^%out.print(Fred);",
+    "code_snippet": "ArrayList\\<Integer\\> Fred;%^%Fred = new ArrayList\\<Integer\\>();%^%Fred.add(7); Fred.add(5); Fred.add(8);%^%Fred.add(3); Fred.add(9); Fred.add(1);%^%Fred.add(4); Fred.add(0); Fred.add(2);%^%Fred.set(5,2);%^%Fred.add(4,6);%^%for (int x=1; x<=5; x++)%^%  Fred.remove(1);%^%out.print(Fred);",
     "options": [
       "[7,6,2,0,2]",
       "[7,5,4,3,2]",
@@ -155,13 +110,7 @@
     "topic": "order of operations",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "int M = 6 + 10 & 4 + 10 << 2;%^%out.print(M);",
-    "options": [
-      "10",
-      "12",
-      "14",
-      "15",
-      "16"
-    ],
+    "options": ["10", "12", "14", "15", "16"],
     "correct": "16"
   },
   {
@@ -169,13 +118,7 @@
     "topic": "java specific data type concepts",
     "question_text": "What is the output of the code segment shown on the right?",
     "code_snippet": "out.print(Long.SIZE/Short.SIZE);%^%out.print(Integer.SIZE/Byte.SIZE);",
-    "options": [
-      "22",
-      "24",
-      "42",
-      "44",
-      "84"
-    ],
+    "options": ["22", "24", "42", "44", "84"],
     "correct": "44"
   },
   {
@@ -183,13 +126,7 @@
     "topic": "input concepts",
     "question_text": "What is output by the code segment shown on the right?",
     "code_snippet": "String Heat;%^%Heat = \"5 1 2 9 2 6 7 4 1 7\";%^%Scanner Sc = new Scanner(Heat);%^%int T = Sc.nextInt();%^%for (int x=0; x<=T; x++)%^%  Sc.next();%^%T += Sc.nextInt() + Sc.nextInt();%^%out.print(T);",
-    "options": [
-      "5",
-      "8",
-      "10",
-      "16",
-      "20"
-    ],
+    "options": ["5", "8", "10", "16", "20"],
     "correct": "10"
   }
 ]

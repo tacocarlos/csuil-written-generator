@@ -1,5 +1,4 @@
-For questions 2 through 15, extract the contents of each question, including the question, question number, question code (if exists), and answer choices. Output it in JSON format, with the content written as markdown. If it is code, then delimit new lines as the phrase "%^%". Remove the answer choices from the options array. Include the correct answer found at the end of the document as the "correct" field, containing the text, not the question index/letter.  Addiionally, each question will be one of the following topics:
-Add the answer choices under the "options" field. Additionally, use the code line delimiter for the answer choices as well.
+For questions 2 through 15, extract the contents of each question, including the question, question number, question code (if exists), and answer choices. Output it in JSON format, with the content written as markdown. If it is code, then delimit new lines as the phrase "%^%". Remove the answer choices from the options array. Include the correct answer found at the end of the document as the "correct" field, containing the text, not the question index/letter. Add the answer choices under the "options" field. Additionally, use the code line delimiter for the answer choices as well.
 
 Each question will be one of the following topics:
 ```
@@ -18,7 +17,9 @@ order of operations
 java specific data type concepts
 ArrayList
 ```
-add this data to the json under the field "topic". There should be one of each of these per input pdf.
+Add this data to the json under the field "topic". There should be one of each of these per input pdf. The question number should be stored under the field "question_number". The question text should be stored as "question_text", and the code should be stored as "code_snippet".
 
-The question number should be stored under the field "question_number". The question text should be stored as "question_text", and the code should be stored as "code_snippet".
+Make sure to escape any LaTeX characters found in the question text. For example, make sure to escape <, >, {, and } by going into math mode. 
+
+
 Process this file according to these instructions.

@@ -14,6 +14,8 @@ out/
 latex-output/
 _minted-main/
 .ipynb_checkpoints/
-
+tex/
+generated/
+_minted
 # editor files
 .vscode/

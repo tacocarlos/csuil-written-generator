@@ -4,13 +4,7 @@
     "topic": "Simple literal math expression",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "out.print(22 / 7 + 15 % 8);",
-    "options": [
-      "4",
-      "7",
-      "8",
-      "10",
-      "12"
-    ],
+    "options": ["4", "7", "8", "10", "12"],
     "correct": "10"
   },
   {
@@ -19,26 +13,20 @@
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "out.print(22 + 8);%^%out.println(3 * 2);%^%out.println(7 / 3);%^%out.print(4 % 11);%^%out.print(12 - 3);",
     "options": [
-      "306\n 2\n 09",
-      "2286\n 2\n 49",
-      "306\n 2\n 49",
-      "30\n 6\n 2\n 0\n 9",
-      "36\n 2\n 49"
+      "306%^%2%^%09",
+      "2286%^%2%^%49",
+      "306%^%2%^%49",
+      "30%^%6%^%2%^%0%^%9",
+      "36%^%2%^%49"
     ],
-    "correct": "306\n 2\n 49"
+    "correct": "306%^%2%^%49"
   },
   {
     "question_number": 4,
     "topic": "String class methods",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "String St = \"BACKPACK\";%^%int T = St.length()-1;%^%out.print(St.charAt(T-1));",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "K",
-      "P"
-    ],
+    "options": ["A", "B", "C", "K", "P"],
     "correct": "C"
   },
   {
@@ -46,10 +34,7 @@
     "topic": "Simple Boolean Logic",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "boolean A = true;%^%boolean B = false;%^%out.print(A && (true || B));",
-    "options": [
-      "true",
-      "false"
-    ],
+    "options": ["true", "false"],
     "correct": "true"
   },
   {
@@ -57,13 +42,7 @@
     "topic": "Math class methods",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "double T = Math.sqrt(40);%^%out.print(Math.ceil(T));",
-    "options": [
-      "6",
-      "6.0",
-      "7",
-      "7.0",
-      "49.0"
-    ],
+    "options": ["6", "6.0", "7", "7.0", "49.0"],
     "correct": "7.0"
   },
   {
@@ -71,13 +50,7 @@
     "topic": "Simple variable expression",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "double R = 7.5;%^%double S = 8.5;%^%double T = 21 / 2;%^%out.print(R + S + T);",
-    "options": [
-      "25",
-      "26.0",
-      "26.5",
-      "27.0",
-      "27"
-    ],
+    "options": ["25", "26.0", "26.5", "27.0", "27"],
     "correct": "26.0"
   },
   {
@@ -85,13 +58,7 @@
     "topic": "Conditionals",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "int M = 5;%^%if(M > 10)%^% {%^%  out.print(M);%^%  M++;%^% }%^%if(M < 3)%^%  out.print(M);%^%  M++;%^%if(M == 7)%^%  out.print(M);%^%out.print(M);",
-    "options": [
-      "5",
-      "67",
-      "7",
-      "567",
-      "6"
-    ],
+    "options": ["5", "67", "7", "567", "6"],
     "correct": "6"
   },
   {
@@ -113,13 +80,7 @@
     "topic": "1D primitive array",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "int[] food = {5,2,3,4,1,0};%^%out.print(food[food[0]-food[4]]);",
-    "options": [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
+    "options": ["0", "1", "2", "3", "4"],
     "correct": "1"
   },
   {
@@ -127,18 +88,12 @@
     "topic": "input concepts",
     "question_text": "What is output by the code segment to the right?",
     "code_snippet": "String St = \"12 23 34 45 56 67\";%^%Scanner Bob = new Scanner(St);%^%int M = Bob.nextInt();%^%Bob.next(); Bob.next(); Bob.next();%^%M = M + Bob.nextInt() + 2;%^%out.print(M);",
-    "options": [
-      "70",
-      "68",
-      "59",
-      "45",
-      "35"
-    ],
+    "options": ["70", "68", "59", "45", "35"],
     "correct": "70"
   },
   {
     "question_number": 12,
-    "topic": "Simple output loop",
+    "topic": "accumulation loop",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "for(int i = 1; i <= 30; i = i + 2)%^%  if (i%3==0)%^%    out.print(i+\" \");",
     "options": [
@@ -152,16 +107,10 @@
   },
   {
     "question_number": 13,
-    "topic": "Simple variable expression",
+    "topic": "order of operations",
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "int w = 511;%^%w = w<<3;%^%w = w>>2;%^%w = w++ + w++;%^%out.print(--w);",
-    "options": [
-      "2048",
-      "2044",
-      "2040",
-      "1024",
-      "1022"
-    ],
+    "options": ["2048", "2044", "2040", "1024", "1022"],
     "correct": "2044"
   },
   {
@@ -169,20 +118,14 @@
     "topic": "java specific data type concepts",
     "question_text": "What is the output of the code segment shown on the right?",
     "code_snippet": "out.println(Double.SIZE/Byte.SIZE);",
-    "options": [
-      "2",
-      "4",
-      "8",
-      "16",
-      "32"
-    ],
+    "options": ["2", "4", "8", "16", "32"],
     "correct": "8"
   },
   {
     "question_number": 15,
     "topic": "ArrayList",
     "question_text": "What is output by the code segment to the right?",
-    "code_snippet": "ArrayList<Integer> numbers;%^%numbers = new ArrayList<Integer>();%^%numbers.add(96);%^%for(int x=0; x<=100; x=x+12)%^%  numbers.add(x);%^%for(int x=1; x<=5; x=x+1)%^%  numbers.remove(0);%^%out.println(numbers);",
+    "code_snippet": "ArrayList\\<Integer\\> numbers;%^%numbers = new ArrayList\\<Integer\\>();%^%numbers.add(96);%^%for(int x=0; x\\<=100; x=x+12)%^%  numbers.add(x);%^%for(int x=1; x\\<=5; x=x+1)%^%  numbers.remove(0);%^%out.println(numbers);",
     "options": [
       "[36, 48, 60, 72, 84, 96]",
       "[48, 60, 72, 84, 96]",

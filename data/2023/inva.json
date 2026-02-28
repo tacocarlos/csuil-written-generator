@@ -19,13 +19,13 @@
     "question_text": "What is the output of the code segment to the right?",
     "code_snippet": "out.print(\"One\");%^%out.println(\"Two\");%^%out.print(\"Three\");%^%out.println(\"Four\");%^%out.print(\"Five\");",
     "options": [
-      "OneTwo\n  ThreeFour\n  Five",
-      "One\n  TwoThree\n  FourFive",
-      "One\n  TwoThreeFour\n  Five",
-      "OneTwo\n  ThreeFourFive",
-      "OneTwo\n  Three\n  FourFive"
+      "OneTwo%^%ThreeFour%^%Five",
+      "One%^%TwoThree%^%FourFive",
+      "One%^%TwoThreeFour%^%Five",
+      "OneTwo%^%ThreeFourFive",
+      "OneTwo%^%Three%^%FourFive"
     ],
-    "correct": "OneTwo\n  ThreeFour\n  Five"
+    "correct": "OneTwo%^%ThreeFour%^%Five"
   },
   {
     "question_number": 4,

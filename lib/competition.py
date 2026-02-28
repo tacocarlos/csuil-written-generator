@@ -6,6 +6,8 @@ from typing import get_args
 
 
 from .topic import Topic
+
+
 class Question:
     text: str
     code: list[str]
@@ -23,7 +25,7 @@ class Question:
         o: list[str],
         comp: "Competition",
         topic: Topic,
-        c_idx: int
+        c_idx: int,
     ):
         self.text = t
         self.code = c
@@ -40,8 +42,8 @@ class Question:
         if self.code is not None and len(self.code) > 0:
             return self.__code_latex__()
         return self.__latex__()
-    
-    def __create_choices__(self):        
+
+    def __create_choices__(self):
         choices = []
         for i, o in enumerate(self.options):
             question_text = ""
@@ -72,9 +74,9 @@ class Question:
     \\begin{{qtext}}{{{self.get_question_id()}}}
 {self.text}
     \\end{{qtext}}
-    \\begin{{minted}}{{java}}
+    \\begin{{verbatim}}
 {"\n".join(self.code)}
-    \\end{{minted}}
+    \\end{{verbatim}}
     \\begin{{qchoices}}
         {"\n".join(choices)}
     \\end{{qchoices}}
@@ -82,10 +84,11 @@ class Question:
 """
 
     def __str__(self) -> str:
-        return f"[{self.num}] {self.text}\n\t{"\t".join(self.options)}"
+        return f"[{self.num}] {self.text}\n\t{'\t'.join(self.options)}"
 
     def get_path_strand(self) -> str:
-        return f'{self.topic.lower().replace(" ", "_")}/'
+        return f"{self.topic.lower().replace(' ', '_')}/"
+
 
 class Competition:
     level: ContestLevel
@@ -136,7 +139,9 @@ class Competition:
             correct_idx = -1
             options = []
             for i, op in enumerate(options_raw):
-                op_text = op.replace("%^%", "\\\\").replace("[", "\\[").replace("]", "\\]")
+                op_text = (
+                    op.replace("%^%", "\\\\").replace("[", "\\[").replace("]", "\\]")
+                )
                 options.append(op_text)
                 if op == correct_text:
                     correct_idx = i
@@ -151,7 +156,7 @@ class Competition:
             C.add_question(Q)
 
         return C
-    
+
     def write_latex(self, base_output_path="./out/"):
         num_written = 0
         for q in self.questions:
@@ -161,6 +166,7 @@ class Competition:
             with open(output_path, "w") as file:
                 file.write(q.to_latex())
             num_written += 1
+
 
 def collect_competitions(year, debug=False):
     C = []
@@ -178,7 +184,9 @@ def collect_competitions(year, debug=False):
         C.append(c)
     return C
 
+
 def generate_latex(year: int, debug=False):
     C = collect_competitions(year, debug)
     for c in C:
         c.write_latex()
+
