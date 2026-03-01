@@ -28,3 +28,6 @@ def normalize_topics() -> list[str]:
     f = lambda t: t.lower().replace(" ", "_")
     topic_normalized = map(f, TOPIC_LIST)
     return list(topic_normalized)
+
+def normalize_topic(topic: str) -> str:
+    return topic.lower().replace(" ", "_")

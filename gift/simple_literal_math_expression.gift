@@ -1,0 +1,210 @@
+::2025A2::
+[markdown]What is output by the code to the right?\n```out.println(3+4 % 1+2 * 5+6);```
+{
+~55
+~11
+~7
+=19
+~There is no output due to a compile error.
+}
+
+::2025B2::
+[markdown]What is output by the code to the right?\n```out.println((-17 % 7) | (11 << 3));```
+{
+~91
+=-3
+~88
+~-91
+~There is no output due to a compile error.
+}
+
+::2025D2::
+[markdown]What is output by the code to the right?\n```out.println(1 + 2 * 3 - 4 / 5);```
+{
+~1
+~9
+=7
+~0
+~There is no output due to a compile error.
+}
+
+::2025R2::
+[markdown]What is output by the code to the right?\n```out.println(212 / 43 - 394 / 63);```
+{
+=-2
+~2
+~0
+~-1
+~There is no output due to a compile error.
+}
+
+::2025S2::
+[markdown]What is output by the code to the right?\n```out.print(243+34 / 21-9 * 21-17);```
+{
+~16
+~5
+=38
+~92
+~There is no output due to a compile error.
+}
+
+::2024A2::
+[markdown]What is the output of the code segment to the right?\n```out.print(22 / 7 + 15 % 8);```
+{
+~4
+~7
+~8
+=10
+~12
+}
+
+::2024B2::
+[markdown]What is the output of the code segment to the right?\n```out.print((25 + 7)/(12 % 7));```
+{
+~4
+~5
+=6
+~7
+~8
+}
+
+::2024D2::
+[markdown]What is the output of the code segment to the right?\n```out.print(12 - 27 + 17 % 10 / 2);```
+{
+=-12
+~-8
+~-4
+~1
+~2
+}
+
+::2024R2::
+[markdown]What is the output of the code segment to the right?\n```out.print(23 + 34 % 7 * 2);```
+{
+~5
+~15
+~25
+=35
+~45
+}
+
+::2024S2::
+[markdown]What is the output of the code segment to the right?\n```out.print(22 % 30 * 4 / 10);```
+{
+~6
+=8
+~10
+~11
+~12
+}
+
+::2024S12::
+[markdown]What is the output of the code segment to the right?\n```int A \= 30 & 29;\nint B \= 29 & 28;\nint C \= A | B;\nout.print(C);```
+{
+~15
+=28
+~29
+~30
+~31
+}
+
+::2023A2::
+[markdown]What is the output of the code segment to the right?\n```out.print(15 + 5 / 4 + 1);```
+{
+~1
+~4
+~6
+=17
+~17.25
+}
+
+::2023B2::
+[markdown]What is the output of the code segment to the right?\n```out.print(1 + 29 % 10 / 4 + 3);```
+{
+~3
+~4
+~5
+=6
+~6.25
+}
+
+::2023D2::
+[markdown]What is the output of the code segment to the right?\n```out.print(35 % 12 / 4 + 27 * 2 % 4);```
+{
+~8
+=4
+~5
+~6
+~56
+}
+
+::2023R2::
+[markdown]What is the output of the code segment to the right?\n```out.print(800 / 3 % 10 + 800 / 10 % 3);```
+{
+=8
+~1066
+~52
+~53
+~9
+}
+
+::2023S2::
+[markdown]What is the output of the code segment to the right?\n```out.print(23 + 37 / 7 % 2 - 24 % 5);```
+{
+~-3
+=20
+~21
+~53
+~9
+}
+
+::2022A2::
+[markdown]What is the output of the code segment to the right?\n```out.print(9 * 8 + 7 % 6 / 5);```
+{
+~0
+~0.2
+~73
+=72
+~72.2
+}
+
+::2022B2::
+[markdown]What is the output of the code segment to the right?\n```out.print(9 * 8 + 7 % 6 / 5);```
+{
+~0
+~0.2
+~73
+=72
+~72.2
+}
+
+::2022D2::
+[markdown]What is the output of the code segment to the right?\n```out.print(35 % 12 / 4 + 27 * 2 % 4);```
+{
+~8
+=4
+~5
+~6
+~56
+}
+
+::2022R2::
+[markdown]What is the output of the code segment to the right?\n```out.println(17 % 12 * 23 - 14 / 2);```
+{
+~50
+~50.5
+~10
+=108
+~There is no output due to a syntax error
+}
+
+::2022S2::
+[markdown]What is the output of the code segment to the right?\n```out.print(11 + 17 % 7 * 31 / 10);```
+{
+~0
+=20
+~28
+~42
+~There is no output due to a runtime error
+}
+

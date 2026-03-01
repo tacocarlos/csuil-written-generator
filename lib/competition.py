@@ -2,8 +2,6 @@ from lib.topic import ContestLevel
 
 import json
 from os import path, makedirs
-from typing import get_args
-
 
 from .topic import Topic
 
@@ -37,6 +35,49 @@ class Question:
 
     def get_question_id(self) -> str:
         return f"{self.competition.year}{self.competition.get_letter()}{self.num}"
+
+    def escape_gift(text: str) -> str:
+        return (
+            text.replace(":", "\\:")
+            .replace("{", "\\{")
+            .replace("}", "\\}")
+            .replace("~", "\\~")
+            .replace("#", "\\#")
+            .replace("=", "\\=")
+            # correct latex escape codes
+            .replace("\\\\", "\\n")
+            .replace("\\[", "[")
+            .replace("\\]", "]")
+            .replace("\\<", "<")
+            .replace("\\>", ">")
+            # use tab character instead of spaces (json contains 2 or 4 spaces)
+            .replace("    ", "\t")
+            .replace("  ", "\t")
+        )
+    
+    def __GIFT_CODE__(self) -> str:
+        if self.code is None or len(self.code) == 0:
+            return ""
+        code = []
+        for line in self.code:
+            code.append(Question.escape_gift(line))
+
+        code_str = "\\n".join(code)
+        return f"\\n```{code_str}```"
+
+    def to_GIFT(self) -> str:
+        output = f"::{self.get_question_id()}::\n[markdown]{Question.escape_gift(self.text)}"
+        if self.code is not None and len(self.code) > 0:
+            output += self.__GIFT_CODE__()
+        output += "\n{\n"
+        for i, o in enumerate(self.options):
+            if i == self.correct_idx:
+                output += f"={Question.escape_gift(o)}\n"
+            else:
+                output += f"~{Question.escape_gift(o)}\n"
+        output += "}"
+
+        return output
 
     def to_latex(self) -> str:
         if self.code is not None and len(self.code) > 0:
@@ -166,27 +207,3 @@ class Competition:
             with open(output_path, "w") as file:
                 file.write(q.to_latex())
             num_written += 1
-
-
-def collect_competitions(year, debug=False):
-    C = []
-    for level in get_args(ContestLevel):
-        fp = f"./data/{year}/{level.lower()}.json"
-        if path.exists(fp) is False:
-            print(f"Unable to find [{fp}] !")
-            continue
-        print(f"Reading data from {year} {level}...")
-        c = Competition.from_file(year, level, fp)
-        if debug:
-            print(f"{c.year} {c.level}")
-            for q in c.questions:
-                print(q)
-        C.append(c)
-    return C
-
-
-def generate_latex(year: int, debug=False):
-    C = collect_competitions(year, debug)
-    for c in C:
-        c.write_latex()
-

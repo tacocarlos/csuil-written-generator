@@ -1,0 +1,190 @@
+::2025A15::
+[markdown]What is the output by the code to the right?\n```ArrayList<String> a;\na \= new ArrayList<String>();\na.add("A");\na.add("B");\na.add("C");\na.remove(1);\na.add("D");\nout.println(a);```
+{
+~[B, C, D]
+~[D, C, A]
+=[A, C, D]
+~[D, B, A]
+~There is no output due to a compile error.
+}
+
+::2025B15::
+[markdown]Which of the following can replace <?*> so that the code to the right compiles and produces the output "[2.3, 1]"?\n```ArrayList< <?*> > ratings;\nratings \= new ArrayList< <?*> >();\nratings.add(2.3); ratings.add(1);\nout.println(ratings);```
+{
+~Integer
+~Double
+=Comparable
+~? extends Comparable
+~None of the above.
+}
+
+::2025D15::
+[markdown]What is the output by the code to the right?\n```ArrayList<Integer> a;\na \= new ArrayList<Integer>();\na.add(1);\na.add(212);\na.add(451);\na.remove(1);\na.add(-17);\nout.println(a);```
+{
+~[-17, 451, 1]
+~[212, 451, -17]
+=[1, 451, -17]
+~[-17, 451, 212]
+~There is no output due to a compile error.
+}
+
+::2025R15::
+[markdown]What is output by the line marked `//q15` in the code to the right?\n```ArrayList<String> a;\na \= new ArrayList<String>();\na.add("ABC");a.add("DEF");\na.add("GHIJK");a.add("LMNOP");\na.add("QRS");a.add("TUV");\na.add("WXYZ");\na.removeIf(s -> s.length() < 4);\nout.println(a); //q15\na.forEach(s ->\{\n	for (int i \= 0; i < s.length(); i +\= 2)\n		out.print(s.charAt(i));\n\}); //q16```
+{
+~[GHIJK, LMNOP]
+=[GHIJK, LMNOP, WXYZ]
+~[ABC, DEF, QRS, TUV]
+~[ABC, DEF, QRS, TUV, WXYZ]
+~There is no output due to an infinite loop.
+}
+
+::2025S15::
+[markdown]What is output by the code to the right?\n```ArrayList<String> a;\na \= new ArrayList<String>();\na.add("Bumblebee");\na.add("Optimus");\na.add(1,"RC");\na.set(0, "Ironhide");\nif(!a.contains(new String("RC")))\n	a.add(1, "RC");\nout.println(a);```
+{
+~[Ironhide, RC, Bumblebee, RC, Optimus]
+~[Ironhide, RC, RC, Optimus]
+=[Ironhide, RC, Optimus]
+~[Ironhide, Bumblebee, RC, Optimus]
+~There is no output due to a runtime error.
+}
+
+::2024A15::
+[markdown]What is output by the code segment to the right?\n```ArrayList<Integer> numbers;\nnumbers \= new ArrayList<Integer>();\nnumbers.add(96);\nfor(int x\=0; x<\=100; x\=x+12)\n	numbers.add(x);\nfor(int x\=1; x<\=5; x\=x+1)\n	numbers.remove(0);\nout.println(numbers);```
+{
+~[36, 48, 60, 72, 84, 96]
+=[48, 60, 72, 84, 96]
+~[24, 36, 48, 60, 72, 84]
+~[0, 12, 24, 36, 48, 60, 72, 84, 96]
+~[96, 12, 24, 36, 48, 60, 72, 84, 96]
+}
+
+::2024B15::
+[markdown]What is output by the code segment to the right?\n```ArrayList<Integer> Stuff;\nStuff \= new ArrayList<Integer>();\nint[] List \= \{1,2,3,4,5,6,7\};\nfor(int x\=1; x<List.length; x++)\n	Stuff.add(List[x-1]*List[x]);\nout.print(Stuff.get(3));```
+{
+~2
+~3
+~6
+~12
+=20
+}
+
+::2024D11::
+[markdown]What is output by the code segment to the right?\n```ArrayList<Integer> Fred;\nFred \= new ArrayList<Integer>();\nFred.add(7); Fred.add(5); Fred.add(8);\nFred.add(3); Fred.add(9); Fred.add(1);\nFred.add(4); Fred.add(0); Fred.add(2);\nFred.set(5,2);\nFred.add(4,6);\nfor (int x\=1; x<\=5; x++)\n	Fred.remove(1);\nout.print(Fred);```
+{
+~[7,6,2,0,2]
+~[7,5,4,3,2]
+~[7,4,5,3,2]
+=[7,2,4,0,2]
+~[1,4,0,2,2]
+}
+
+::2024R11::
+[markdown]What is output by the code segment to the right?\n```ArrayList<Character> France;\nFrance \= new ArrayList<Character>();\nFrance.add((char)70);\nfor(int x\=1; x<5; x++)\n	France.add((char)(France.get(x-1)+2));\nout.print(France.get(France.size()-1));```
+{
+~F
+~L
+~M
+=N
+~P
+}
+
+::2023A15::
+[markdown]What is output by the code segment to the right?\n```ArrayList<Integer> list;\nlist \= new ArrayList<Integer>();\nlist.add(11);\nlist.add(22);\nlist.remove(1);\nlist.add(33);\nlist.add(44);\nlist.remove(1);\nlist.add(55);\nlist.add(66);\nlist.remove(1);\nout.println(list);```
+{
+~[11, 22, 33, 44, 55, 66]
+~[44, 55, 66]
+=[11, 55, 66]
+~[22, 55, 66]
+~[22, 44, 66]
+}
+
+::2023B15::
+[markdown]What is output by the code segment to the right?\n```ArrayList<Integer> messi;\nmessi \= new ArrayList<Integer>();\nmessi.add(10);\nmessi.add(12);\nmessi.add(messi.get(1));\nmessi.add(14);\nmessi.remove(0);\nmessi.add(16);\nmessi.add(10);\nmessi.add(0,messi.get(0)-2);\nout.println(messi);```
+{
+~[12, 10, 14, 16, 10]
+~[10, 12, 10, 14, 16, 10]
+~[12, 12, 14, 16, 10]
+=[10, 12, 12, 14, 16, 10]
+~[10, 12, 14, 16, 10]
+}
+
+::2023D15::
+[markdown]What is output by the code segment to the right?\n```ArrayList<Integer> eagle;\neagle \= new ArrayList<Integer>();\neagle.add(11);\neagle.add(0,22);\neagle.add(33);\neagle.add(0,44);\neagle.add(eagle.get(1));\neagle.set(1,55);\neagle.remove(3);\nout.print(eagle);```
+{
+~[11, 22, 33, 55]
+~[11, 55, 44, 22]
+~[55, 22, 33, 22]
+~[44, 22, 33, 11]
+=[44, 55, 11, 22]
+}
+
+::2023R15::
+[markdown]What is output by the code segment to the right?\n```ArrayList<Integer> keys;\nkeys \= new ArrayList<Integer>();\nfor(int x \= 10; x<\=100; x+\=10)\n	keys.add(x);\nfor(int x \= 1; x<\= 5; x++)\n	if (keys.get(x)%10 \=\= 0)\n		keys.remove(x);\nout.print(keys);```
+{
+=[10, 30, 50, 70, 90]
+~[60, 70, 80, 90, 100]
+~[20, 40, 60, 80, 100]
+~[20, 30, 40, 50, 60]
+~[10, 20, 40, 50, 70]
+}
+
+::2023S15::
+[markdown]What is output by the code segment to the right?\n```ArrayList<Integer> soup;\nsoup \= new ArrayList<Integer>();\nfor(int x \= 1; x<\=5; x++)\n\{\n	soup.add(x);\n	soup.add(0,x*10);\n	soup.remove(soup.size()-1);\n\}\nout.print(soup);```
+{
+~[10, 20, 30, 40, 50]
+=[50, 40, 30, 20, 10]
+~[10, 10, 20, 20, 30]
+~[50, 50, 40, 40, 30]
+~[1, 0, 2, 0, 3]
+}
+
+::2022A15::
+[markdown]What is the output of the code segment to the right?\n```ArrayList<Integer> list;\nlist \= new ArrayList<Integer>();\nlist.add(7);\nlist.add(5);\nlist.add(3);\nlist.add(1);\nlist.remove(3);\nout.println(list);```
+{
+~[7, 5, 3, 1]
+~[1]
+=[7, 5, 3]
+~[7, 5, 1]
+~There is no output due to a runtime error
+}
+
+::2022B15::
+[markdown]What is the output of the code segment to the right?\n```ArrayList<Integer> list;\nlist \= new ArrayList<Integer>();\nlist.add(7);\nlist.add(5);\nlist.add(3);\nlist.add(1);\nlist.remove(3);\nSystem.out.println(list);```
+{
+~[7, 5, 3, 1]
+~[1]
+=[7, 5, 3]
+~[7, 5, 1]
+~There is no output due to a runtime error
+}
+
+::2022D15::
+[markdown]What is output by the code segment to the right?\n```ArrayList<Integer> eagle;\neagle \= new ArrayList<Integer>();\neagle.add(11);\neagle.add(0,22);\neagle.add(33);\neagle.add(0,44);\neagle.add(eagle.get(1));\neagle.set(1,55);\neagle.remove(3);\nout.print(eagle);```
+{
+~[11, 22, 33, 55]
+~[11, 55, 44, 22]
+~[55, 22, 33, 22]
+~[44, 22, 33, 11]
+=[44, 55, 11, 22]
+}
+
+::2022R15::
+[markdown]What is the output of the code segment to the right?\n```ArrayList<Integer> list;\nlist \= new ArrayList<>();\nfor(int i \= 0;i<6;i++)\{\n	list.add(10*i + 1);\n	list.add(10*i + 4);\n	list.add(10*i + 5);\n	list.add(10*i + 6);\n	list.add(10*i + 9);\n\}\nout.println(list.get(15) - list.get(7));```
+{
+~12
+=16
+~17
+~21
+~None of the above
+}
+
+::2022S15::
+[markdown]What is the output of the code segment to the right?\n```ArrayList<Integer> list;\nlist \= new ArrayList<Integer>();\nListIterator<Integer> it;\nit \= list.listIterator();\nit.add(1);\nit.add(2);\nit.previous();\nit.add(3);\nit.next();\nit.add(4);\nout.println(list);```
+{
+=[1, 3, 2, 4]
+~[1, 2, 3, 4]
+~[1, 4, 3, 2]
+~[1, 3, 4, 2]
+~There is no output due to an error.
+}
+
